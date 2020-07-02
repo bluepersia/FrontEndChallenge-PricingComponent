@@ -11,3 +11,22 @@
 }
 
 
+body 
+{
+    margin: 0;
+}
+
+
+#pricing-component 
+{
+    font-size: 0.9375rem;
+    font-weight: 700;
+    font-family: var(--font);
+    text-align: center;
+    color: var(--gray-blue);
+}
+
+#pricing-component * 
+{
+    box-sizing: border-box;
+}
