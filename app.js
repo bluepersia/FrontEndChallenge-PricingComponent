@@ -35,7 +35,7 @@ const toggle = document.querySelector ('.pricing-component input');
 const pricePlans = document.querySelectorAll ('.price-plan'); 
 
 toggle.addEventListener ('change', updatePricing);
-
+pricePlans.forEach (pricePlan => pricePlan.addEventListener ('transitionend', ({target}) => Number(target.style.opacity) == 0 ? displayPricing () : 0));
 
 displayPricing ();
 
@@ -44,7 +44,10 @@ function updatePricing ()
 {
     currentPlanId = toggle.checked ? 1 : 0;
 
-    displayPricing ();
+    pricePlans.forEach (pricePlan => pricePlan.querySelector ('h1').style.opacity = pricePlan.querySelector ('.details').style.opacity = 0);
+
+    
+    
 }
 
 function displayPricing ()
@@ -58,11 +61,19 @@ function displayPricing ()
             else
             pricePlan.classList.remove ('annual');
 
-        pricePlan.querySelector('.title').textContent = plan.title;
-        pricePlan.querySelector ('.price').textContent = plan.price;
-        pricePlan.querySelector ('.storage').textContent = displayStorage (plan.storage);
-        pricePlan.querySelector ('.users').textContent = plan.usersAllowed;
-        pricePlan.querySelector ('.send').textContent = displayStorage (plan.sendAmount);
+       pricePlan.querySelector('.title').textContent = plan.title;
+       
+        
+       const priceHeading = pricePlan.querySelector ('h1');
+        const price = priceHeading.querySelector ('.price');
+        price.textContent = plan.price;
+
+        const details = pricePlan.querySelector ('.details');
+        details.querySelector ('.storage').textContent = displayStorage (plan.storage);
+        details.querySelector ('.users').textContent = plan.usersAllowed;
+        details.querySelector ('.send').textContent = displayStorage (plan.sendAmount);
+
+        priceHeading.style.opacity = details.style.opacity = 1;
     });
 }
 

@@ -137,7 +137,7 @@ body
   }
  
 
-  
+ 
 
 
   .price-plan 
@@ -176,7 +176,9 @@ body
   {
       font-size: 4rem;
       color: var(--dark-gray-blue);
+      transition: opacity 250ms;
   }
+
 
   .price-plan.annual h1
   {
@@ -205,6 +207,7 @@ body
   {
       border-top: 1px solid var(--light-gray-blue);
       margin-bottom: 1.5rem;
+      transition: opacity 250ms;
   }
 
   .price-plan p 
