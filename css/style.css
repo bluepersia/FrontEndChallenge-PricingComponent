@@ -171,6 +171,7 @@ body
       display: -webkit-flex;
       display: -ms-flexbox;
       align-items: center;
+      justify-content: center;
   }
 
   .price-plan.annual h1 span 
@@ -202,6 +203,12 @@ body
       color: var(--primary-gradient-end);
   }
 
+  .price-plan.highlight button:hover, .price-plan.highlight button:focus
+  {
+      color: white;
+      border-color: white;
+  }
+
 
 
 
@@ -218,6 +225,15 @@ body
       letter-spacing: 0.1em;
       padding: 1em 0;
       border-radius: 5px;
-      border: 0;
+      border: 1px solid rgba(0,0,0,0);
+
+      transition: background-color 250ms, background-image 250ms, border 250ms, color 250ms;
+  }
+
+  .pricing-component button:hover, .pricing-component button:focus 
+  {
+    background: 0;
+    color: var(--primary-gradient-start);
+    border-color: var(--primary-gradient-start);
   }
   
