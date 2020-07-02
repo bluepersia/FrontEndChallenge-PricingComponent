@@ -61,6 +61,8 @@ body
 }
 
 
+
+
 #switch-container 
 {
     margin-bottom: 4.5rem;
@@ -110,6 +112,8 @@ body
     border-radius: 1rem;
     background: var(--primary-gradient);
     left: 0;
+
+    -webkit-filter: brightness(100%);
     filter: brightness(100%);
     transition: filter 250ms;
 }
@@ -128,10 +132,12 @@ body
   }
   .custom-checkbox input:hover + span::before 
   {
+    -webkit-filter: brightness(120%);
       filter:brightness(120%);
-      -webkit-filter: brightness(120%);
   }
  
+
+  
 
 
   .price-plan 
@@ -143,6 +149,15 @@ body
 
       padding: 2.375rem;
       margin-bottom: 1.9375rem;
+
+      
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      
+      flex-direction: column;
+      align-items: center;
   }
 
   .price-plan.highlight
@@ -166,12 +181,14 @@ body
   .price-plan.annual h1
   {
       font-size: 2.5rem;
-      display: flex;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
+      display: flex;
+      
       align-items: center;
       justify-content: center;
+
   }
 
   .price-plan.annual h1 span 
@@ -210,6 +227,41 @@ body
   }
 
 
+  @media (min-width:600px)
+  {
+
+    #pricing-component 
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+      #pricing
+      {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+          display: flex;
+          
+  
+          justify-content: center;
+          align-items: center;
+          
+      }
+
+      .price-plan, 
+      .price-plan.annual
+      {
+          min-width: 250px;
+          width: 24%;
+      }
+
+      .price-plan.highlight 
+      {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+      }
+
+  }
 
 
   /*Components*/
