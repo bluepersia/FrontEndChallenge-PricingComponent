@@ -157,13 +157,28 @@ body
       margin-bottom: 1.5rem;
   }
 
-  .price-plan h1 
+  .price-plan h1, .price-plan h1 span 
   {
       font-size: 4rem;
       color: var(--dark-gray-blue);
   }
 
-  .price-plan.highlight h1 
+  .price-plan.annual h1
+  {
+      font-size: 2.5rem;
+      display: flex;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      align-items: center;
+  }
+
+  .price-plan.annual h1 span 
+  {
+      margin-left: 0.5rem;
+  }
+
+  .price-plan.highlight h1, .price-plan.price-plan.highlight h1 span
   {
       color: white;
   }
