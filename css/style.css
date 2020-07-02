@@ -1,6 +1,8 @@
 :root 
 {
-    --primary-gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    --primary-gradient-start: hsl(236, 72%, 79%);
+    --primary-gradient-end: hsl(237, 63%, 64%);
+    --primary-gradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     
     --very-light-gray-blue: hsl(240, 78%, 98%);
     --light-gray-blue: hsl(234, 14%, 74%);
@@ -56,6 +58,12 @@ body
     justify-content: center;
     align-items: center;
     
+}
+
+
+#switch-container 
+{
+    margin-bottom: 4.5rem;
 }
 
 .custom-checkbox 
@@ -121,6 +129,7 @@ body
   .custom-checkbox input:hover + span::before 
   {
       filter:brightness(120%);
+      -webkit-filter: brightness(120%);
   }
  
 
@@ -133,9 +142,67 @@ body
       border-radius: 0.75rem;
 
       padding: 2.375rem;
+      margin-bottom: 1.9375rem;
+  }
+
+  .price-plan.highlight
+  {
+      background: linear-gradient(180deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      color: white;
   }
 
   .price-plan h4 
   {
       font-size: 1.2rem;
+      margin-bottom: 1.5rem;
   }
+
+  .price-plan h1 
+  {
+      font-size: 4rem;
+      color: var(--dark-gray-blue);
+  }
+
+  .price-plan.highlight h1 
+  {
+      color: white;
+  }
+
+  .price-plan .details 
+  {
+      border-top: 1px solid var(--light-gray-blue);
+      margin-bottom: 1.5rem;
+  }
+
+  .price-plan p 
+  {
+      padding: 0.9rem 0;
+    border-bottom: 1px solid var(--light-gray-blue);
+  }
+
+
+  .price-plan.highlight button 
+  {
+      background: white;
+      color: var(--primary-gradient-end);
+  }
+
+
+
+
+  /*Components*/
+
+  .pricing-component button 
+  {
+      background: var(--primary-gradient);
+      width: 100%;
+      color: white;
+      font-family: var(--font);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 1em 0;
+      border-radius: 5px;
+      border: 0;
+  }
+  
