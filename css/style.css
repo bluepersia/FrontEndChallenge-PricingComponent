@@ -24,9 +24,15 @@ body
     font-family: var(--font);
     text-align: center;
     color: var(--gray-blue);
+    
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position-x: 190px, -190px;
+    background-position-y: top, bottom;
+    background-repeat: no-repeat;
 }
 
 #pricing-component * 
 {
     box-sizing: border-box;
 }
+
