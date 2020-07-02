@@ -33,15 +33,17 @@ body
     padding: 4.375rem 6.66%; 
 }
 
-#pricing-component * 
+.pricing-component * 
 {
     box-sizing: border-box;
+    margin: 0;
 }
 
 
 #pricing-component h3 
 {
     font-size: 1.9rem;
+    margin-bottom: 2rem;
 }
 
 #pricing-component #switch-container 
@@ -54,6 +56,11 @@ body
     justify-content: center;
     align-items: center;
     
+}
+
+.custom-checkbox 
+{
+   margin: 0 1.6875rem;
 }
 
 .custom-checkbox input
@@ -74,7 +81,6 @@ body
    position: relative;
    vertical-align: middle;
    cursor: pointer;
-   margin: 0 1.6875rem;
 }
 .custom-checkbox span::after 
 {
@@ -117,3 +123,19 @@ body
       filter:brightness(120%);
   }
  
+
+
+  .price-plan 
+  {
+      background-color: white;
+      box-shadow: 0px 5px 25px var(--light-gray-blue);
+
+      border-radius: 0.75rem;
+
+      padding: 2.375rem;
+  }
+
+  .price-plan h4 
+  {
+      font-size: 1.2rem;
+  }
